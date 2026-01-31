@@ -126,11 +126,11 @@ with col_foto:
 with col_texto:
     st.title(NOMBRE_COMPLETO)
     st.markdown("**Analista de Datos Junior**")
-    st.markdown(f"Cedula de identidad: {CEDULA}")
-    st.markdown(f"Ubicacion📍: {UBICACION}")
-    st.markdown(f"Telefono📞: {TELEFONO}")
-    st.markdown(f"Correo electronico:✉️ {EMAIL}")
-    st.markdown(f"linkedin🔗: {LINKEDIN}")
+    st.markdown(f"🪪Cedula de identidad: {CEDULA}")
+    st.markdown(f"📍Ubicacion: {UBICACION}")
+    st.markdown(f"📞Telefono: {TELEFONO}")
+    st.markdown(f"✉️Correo electronico: {EMAIL}")
+    st.markdown(f"🔗linkedin: {LINKEDIN}")
 st.divider()
 
 # ========================
