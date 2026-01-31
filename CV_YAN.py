@@ -38,6 +38,7 @@ TELEFONO = "+1 (829) 453-0115"
 EMAIL = "dauri02041116@gmail.com"
 CIUDAD = "Santo Domingo"
 PAIS = "República Dominicana"
+CEDULA = "402-3005769-3"
 LINKEDIN = "https://www.linkedin.com/in/yan-carlos-jimenez-178840264?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
 
 # ============================
@@ -111,7 +112,7 @@ REFERIDOS = {
 # ========================
 # ENCABEZADO CON FOTO CIRCULAR
 # ========================
-# Creamos dos columnas: una pequeña para la foto, una grande para el texto
+
 col_foto, col_texto = st.columns([1, 4])
 
 with col_foto:
@@ -128,9 +129,9 @@ with col_foto:
 with col_texto:
     st.title(NOMBRE_COMPLETO)
     st.markdown("**Analista de Datos Junior**")
-    st.markdown(
-        f"📍 {CIUDAD}, {PAIS} | 📞 {TELEFONO} | ✉️ {EMAIL} | 🔗 {LINKEDIN}"
-    )
+    st.markdown(f"Cedula de identidad: {CEDULA}")
+    st.markdown(f"Ubicacion📍: {CIUDAD}, {PAIS} \nTelefono📞: {TELEFONO} \n Correo electronico:✉️ {EMAIL} \n linkedin🔗: {LINKEDIN}")
+
 
 st.divider()
 
