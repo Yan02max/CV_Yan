@@ -1,5 +1,6 @@
 import streamlit as st
 import matplotlib.pyplot as plt
+from PIL import Image
 
 # ============================
 # CONFIGURACIÓN DE LA PÁGINA
@@ -10,17 +11,21 @@ st.set_page_config(
     layout="wide"
 )
 
-
-
 # ============================
-# ESTILOS (CSS)
+# ESTILOS (CSS) - FOTO CIRCULAR
 # ============================
 st.markdown("""
 <style>
-h1 {color: #2E86C1;}
+h1 {color: #2E86C1; margin-bottom: 0;}
 h2, h3 {color: #1F618D;}
 div[data-testid="stProgress"] > div > div {
     background-color: #2E86C1;
+}
+/* Estilo para foto circular */
+img {
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    object-fit: cover;
 }
 </style>
 """, unsafe_allow_html=True)
@@ -33,7 +38,7 @@ TELEFONO = "+1 (829) 453-0115"
 EMAIL = "dauri02041116@gmail.com"
 CIUDAD = "Santo Domingo"
 PAIS = "República Dominicana"
-LINKEDIN = "linkedin.com/in/yan-jimenez"
+LINKEDIN = "https://www.linkedin.com/in/yan-carlos-jimenez-178840264?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
 
 # ============================
 # PERFIL PROFESIONAL
@@ -104,13 +109,29 @@ REFERIDOS = {
 }
 
 # ========================
-# ENCABEZADO
+# ENCABEZADO CON FOTO CIRCULAR
 # ========================
-st.title(NOMBRE_COMPLETO)
-st.markdown("**Analista de Datos Junior**")
-st.markdown(
-    f"📍 {CIUDAD}, {PAIS} | 📞 {TELEFONO} | ✉️ {EMAIL} | 🔗 {LINKEDIN}"
-)
+# Creamos dos columnas: una pequeña para la foto, una grande para el texto
+col_foto, col_texto = st.columns([1, 4])
+
+with col_foto:
+    # Ajusta la ruta a tu foto (puede ser "foto.jpg", "perfil.png", etc.)
+    # Si la foto está en otra carpeta, usa la ruta completa: "imagenes/foto.jpg"
+    try:
+        image = Image.open("yan.jpeg")  
+        st.image(image, width=150)
+    except FileNotFoundError:
+        # Placeholder si no encuentra la foto
+        st.markdown("📷 *Foto*")
+        st.info("")
+
+with col_texto:
+    st.title(NOMBRE_COMPLETO)
+    st.markdown("**Analista de Datos Junior**")
+    st.markdown(
+        f"📍 {CIUDAD}, {PAIS} | 📞 {TELEFONO} | ✉️ {EMAIL} | 🔗 {LINKEDIN}"
+    )
+
 st.divider()
 
 # ========================
@@ -154,7 +175,7 @@ st.divider()
 st.subheader("📊 Nivel de Dominio Técnico")
 
 fig, ax = plt.subplots(figsize=(7, 4))
-ax.barh(HABILIDADES, NIVELES, color="#1F618D")
+ax.barh(HABILIDADES, NIVELES, color="#1F778D")
 ax.set_xlim(0, 100)
 ax.set_xlabel("Nivel (%)")
 
