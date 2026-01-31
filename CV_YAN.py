@@ -89,7 +89,7 @@ EDUCACION = [
 # HABILIDADES
 # ============================
 HABILIDADES = [
-    "Python (Pandas)",
+    "Python",
     "Power BI",
     "Excel Avanzado",
     "Análisis de Datos",
