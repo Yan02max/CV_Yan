@@ -98,7 +98,7 @@ HABILIDADES = [
     "Atención al Cliente"
 ]
 
-NIVELES = [85, 90, 75, 80, 85, 80, 70]
+NIVELES = [80, 85, 70, 75, 80, 70, 80]
 
 # ========================
 # REFERENCIAS
@@ -116,8 +116,6 @@ REFERIDOS = {
 col_foto, col_texto = st.columns([1, 4])
 
 with col_foto:
-    # Ajusta la ruta a tu foto (puede ser "foto.jpg", "perfil.png", etc.)
-    # Si la foto está en otra carpeta, usa la ruta completa: "imagenes/foto.jpg"
     try:
         image = Image.open("yan.jpeg")  
         st.image(image, width=150)
@@ -177,7 +175,7 @@ st.divider()
 st.subheader("📊 Nivel de Dominio Técnico")
 
 fig, ax = plt.subplots(figsize=(7, 4))
-ax.barh(HABILIDADES, NIVELES, color="#1F778D")
+ax.barh(HABILIDADES, NIVELES, color="#0E9456")
 ax.set_xlim(0, 100)
 ax.set_xlabel("Nivel (%)")
 
