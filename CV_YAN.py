@@ -130,7 +130,7 @@ with col_texto:
     st.title(NOMBRE_COMPLETO)
     st.markdown("**Analista de Datos Junior**")
     st.markdown(f"Cedula de identidad: {CEDULA}")
-    st.markdown(f"Ubicacion📍: {CIUDAD}, {PAIS}  linkedin🔗: {LINKEDIN}")
+    st.markdown(f"Ubicacion📍: {CIUDAD}, {PAIS}")
     st.markdown(f"Telefono📞: {TELEFONO}")
     st.markdown(f"Correo electronico:✉️ {EMAIL}")
     st.markdown(f"linkedin🔗: {LINKEDIN}")
