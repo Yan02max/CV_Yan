@@ -36,8 +36,7 @@ img {
 NOMBRE_COMPLETO = "Yan Carlos Jimenez"
 TELEFONO = "+1 (829) 453-0115"
 EMAIL = "dauri02041116@gmail.com"
-CIUDAD = "Santo Domingo"
-PAIS = "República Dominicana"
+UBICACION = "Calle D3, sector La Milagrosa, Santo Domingo Norte, Provincia Santo Domingo, República Dominicana."
 CEDULA = "402-3005769-3"
 LINKEDIN = "https://www.linkedin.com/in/yan-carlos-jimenez-178840264?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
 
@@ -128,7 +127,7 @@ with col_texto:
     st.title(NOMBRE_COMPLETO)
     st.markdown("**Analista de Datos Junior**")
     st.markdown(f"Cedula de identidad: {CEDULA}")
-    st.markdown(f"Ubicacion📍: {CIUDAD}, {PAIS}")
+    st.markdown(f"Ubicacion📍: {UBICACION}")
     st.markdown(f"Telefono📞: {TELEFONO}")
     st.markdown(f"Correo electronico:✉️ {EMAIL}")
     st.markdown(f"linkedin🔗: {LINKEDIN}")
