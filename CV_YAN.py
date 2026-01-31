@@ -175,7 +175,7 @@ st.divider()
 st.subheader("📊 Nivel de Dominio Técnico")
 
 fig, ax = plt.subplots(figsize=(7, 4))
-ax.barh(HABILIDADES, NIVELES, color="#0E9456")
+ax.barh(HABILIDADES, NIVELES, color="#0BA4E0")
 ax.set_xlim(0, 100)
 ax.set_xlabel("Nivel (%)")
 
